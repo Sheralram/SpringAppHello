@@ -8,6 +8,8 @@ public class SpringappHellobridgelabzApplication {
 	public static void main(String[] args) {
 		System.out.println("Hello Bridgelabz");
 		SpringApplication.run(SpringappHellobridgelabzApplication.class, args);
+
+
 	}
 
 }
