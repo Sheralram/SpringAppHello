@@ -1,9 +1,9 @@
 package com.bridgelabz.springapphellobridgelabz.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.bridgelabz.springapphellobridgelabz.dto.EmployeeDto;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class HelloWebController {
@@ -25,5 +25,12 @@ public class HelloWebController {
             @PathVariable(name = "id") String id
     ) {
         return "Hello " + id + " from Bridgelabz";
+    }
+
+    @PostMapping(value = "test2")
+    public String test2(
+            @RequestBody  List<EmployeeDto> employeeDtoList
+            ){
+            return employeeDtoList.toString();
     }
 }
