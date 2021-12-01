@@ -33,4 +33,9 @@ public class HelloWebController {
             ){
             return employeeDtoList.toString();
     }
+
+    @PutMapping("/put/{name}")
+    public String test3(@PathVariable String firstname, @RequestParam String lastname){
+        return "Hello "+firstname+" "+lastname + " from Bridgelabz";
+    }
 }
